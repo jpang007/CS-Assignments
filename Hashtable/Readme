@@ -1,18 +1,43 @@
-For this assignment, I was instructed to first make a double Linked List which killed off repeated values in Lab.
-Then I was to input the original values (non repeat deleted) into a ordered binary tree, then input that ordering
-back into the original List.
+This assignment I modified the .h files as both did not complie originally and changed 
+the name of HashTable and its functions of SeparateChaining.h so that both
+SeparateChaining and QuadraticProbing could be included in the main.cpp.
 
-For the Double Linked List, I simply divided the work between the ints and the Fractions with a if statement to make 
-my life easier. In the case that it is an int, I still input it into a list, but only use that to input it into the output
-file. For the actually functions, I made two versions, one that handles integers and the other that handles Fractions.
+I allowed the user to specify any input file they wanted, ex. .html or .txt
+by looking for the period in the input file name and substring up to that point
+to keep the output file names correct.
 
-For the Functions, I used a similar insert function as Integers, however I modified it so it works with lists.
-Both insert functions are capable with dealing with repeat values being entered in by using the Random expression 
-given in the assignment. 
+The hash or hashS functions are the original given functions for hashing the superHash 
+and superHashS functions are the CRC Varient modified functions in which I replaced
+the line 9 or the for loop with the given code.
+Because I used the original hash function in my code, the modified hash function using 
+the CRC Varient is named superHash in order so that my code still works.
 
-For outputting the values, I used a postorder and inorder for both integers and Fractions.
+For the dictionary files, I coded the small dictionary as smalldic.txt 
+and the larger one as Ispell.txt, the program is hard-coded this way and 
+can not accept any other dictionary.txt files.
 
-For sorting the list of Fractions afterward, I simply cleared the original list, named originalformula then I push_backed
-the values in a similar fashion of printing in order.
+I put both all the words from the input file and dictionary into separate 
+vector of strings, then in order to add them into the hashtable I used the 
+hash function that was given in both the probing and chaining files.
 
-I did the same as above for integers. 
+Before inserting, I added an extra for loop to make sure all the dictionary words were
+added correctly into the hashtable with a .contains check each hash(dictionarywords[i]).
+Where dictionarywords is a vector of string.
+
+I inserted the correct dictionary into the hashtable then using the .contains I would 
+check to see which words were not in by using a simple == false. If false, it would throw the
+specific word into the output .out file.
+
+As for the actual probing and chaining aspect, I modified the SeparateChaining.h
+to have an extra function called mahchain which simply gets the the list size 
+at the hash value of the string. This is then throw into a vector of ints where 
+it is complied into the length of chain and number of occurances that is outputted 
+int the .stats file.
+
+Similarily to the chaining, the probing does the same thing however I created an 
+extern int called collisioncounter which simply increments each time the while loop in 
+findPos happens. collisioncounter is reset each time insert is called, all these values
+are also put into a vector of ints which again is analyzed and compiled into the .stats file 
+upon running the probing. 
+
+
