@@ -1,0 +1,2 @@
+In this assignment I created an algorithm that takes a specified modulus of a user specified fibonacci sequence and outputs the sequence BEFORE it
+repeats. Then the program will ask the user if they wish to see the remaining ordered pairs that it did not display of the sequence.
