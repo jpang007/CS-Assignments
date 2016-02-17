@@ -16,8 +16,3 @@ For sorting the list of Fractions afterward, I simply cleared the original list,
 the values in a similar fashion of printing in order.
 
 I did the same as above for integers. 
-
-I was unclear about using the Standard Template Library, I assumed I did not need to declare any Template<Class T> or 
-anything such as that. My code works without it and after research online, I noticed using the Template includes
-using the iterator such as list<Fraction> iterator and not directly using Template. 
-I did not realize this until Monday night, next time I will be more proactive and clarify things such as this earlier. 
