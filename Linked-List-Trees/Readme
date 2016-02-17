@@ -1,0 +1,23 @@
+For this assignment, I was instructed to first make a double Linked List which killed off repeated values in Lab.
+Then I was to input the original values (non repeat deleted) into a ordered binary tree, then input that ordering
+back into the original List.
+
+For the Double Linked List, I simply divided the work between the ints and the Fractions with a if statement to make 
+my life easier. In the case that it is an int, I still input it into a list, but only use that to input it into the output
+file. For the actually functions, I made two versions, one that handles integers and the other that handles Fractions.
+
+For the Functions, I used a similar insert function as Integers, however I modified it so it works with lists.
+Both insert functions are capable with dealing with repeat values being entered in by using the Random expression 
+given in the assignment. 
+
+For outputting the values, I used a postorder and inorder for both integers and Fractions.
+
+For sorting the list of Fractions afterward, I simply cleared the original list, named originalformula then I push_backed
+the values in a similar fashion of printing in order.
+
+I did the same as above for integers. 
+
+I was unclear about using the Standard Template Library, I assumed I did not need to declare any Template<Class T> or 
+anything such as that. My code works without it and after research online, I noticed using the Template includes
+using the iterator such as list<Fraction> iterator and not directly using Template. 
+I did not realize this until Monday night, next time I will be more proactive and clarify things such as this earlier. 
